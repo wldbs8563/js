@@ -6,6 +6,21 @@
     <title>weight</title>
 </head>
 <body>
-    
+    <div class="weight">
+        <h1></h1>
+        <input type="text" id="data" placeholder="몸무게를 입력하세요">
+        <button id="btn">확인하기</button>
+    </div>
+    <script>
+        let a = 100;
+        let b = 0.9;
+        let height = '';
+        let result = (height-a)*b
+        const weight = document.querySelector('.weight');
+        const data = document.querySelector('#data')
+        const btn = document.querySelector('#btn')
+        console.log(weight, data, btn);
+
+    </script>
 </body>
 </html>
