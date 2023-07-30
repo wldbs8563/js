@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dan99</title>
+    <style>
+        body {
+            background:url(./images/99dan.jpg)no-repeat;
+            background-size:cover;
+        }
+        .wrap {
+            width:500px; height:750px;
+            margin:0 auto;
+            text-align:center;
+            background:rgba(255, 251, 0, 0.8);
+            border-radius:50px;
+        }
+        .wrap h1 {}
+        .wrap p {
+            font-size:2rem; font-weight:600;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>구구단 2단</h1>
+        <p class="d1"></p>
+        <p class="d2"></p>
+        <p class="d3"></p>
+        <p class="d4"></p>
+        <p class="d5"></p>
+        <p class="d6"></p>
+        <p class="d7"></p>
+        <p class="d8"></p>
+        <p class="d9"></p>
+    </div>
+    <script>
+        let a = 2
+        let b = 1
+        const d1 = document.querySelector('.d1')
+        const d2 = document.querySelector('.d2')
+        const d3 = document.querySelector('.d3')
+        const d4 = document.querySelector('.d4')
+        const d5 = document.querySelector('.d5')
+        const d6 = document.querySelector('.d6')
+        const d7 = document.querySelector('.d7')
+        const d8 = document.querySelector('.d8')
+        const d9 = document.querySelector('.d9')
+        d1.innerHTML = `2X1=${a*b}`
+        b = ++b
+        d2.innerHTML = `2X2=${a*b}`
+        b = ++b
+        d3.innerHTML = `2X3=${a*b}`
+        b = ++b
+        d4.innerHTML = `2X4=${a*b}`
+        b = ++b
+        d5.innerHTML = `2X5=${a*b}`
+        b = ++b
+        d6.innerHTML = `2X6=${a*b}`
+        b = ++b
+        d7.innerHTML = `2X7=${a*b}`
+        b = ++b
+        d8.innerHTML = `2X8=${a*b}`
+        b = ++b
+        d9.innerHTML = `2X9=${a*b}`
+    </script>
+</body>
+</html>
