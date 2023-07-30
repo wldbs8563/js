@@ -3,23 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weight</title>
+    <title>적정체중 확인하기</title>
+    <style>
+        @font-face {
+    font-family: 'Mingyung';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_08@1.0/Mingyung.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+        }
+        body {
+            background:url(./images/weight.jpg) no-repeat;
+            background-size:cover;
+        }
+        .wrap {
+            margin-top:150px;
+            text-align:center;
+        }
+        .wrap h1 {
+            font-family: 'Mingyung';
+            font-size:4rem;
+        }
+        .wrap .data {
+            display:flex; flex-flow: column nowrap;
+            align-items:center;
+        }
+        .wrap .data #height {
+            width:150px; font-size:1rem;
+        }
+        .wrap .data #weight {
+            width:150px; font-size:1rem;
+            margin:10px 0;
+        }
+        .wrap #btn {
+            width:140px; font-size:1rem;
+        }
+        .wrap p {
+            font-size:1rem; font-weight:700;
+        }
+    </style>
 </head>
 <body>
-    <div class="weight">
-        <h1></h1>
-        <input type="text" id="data" placeholder="몸무게를 입력하세요">
-        <button id="btn">확인하기</button>
+    <div class="wrap">
+        <h1>적정체중 확인하기</h1>
+        <div class="data">
+            <input type="text" id="height" placeholder="키를 입력하세요">
+            <input type="text" id="weight" placeholder="몸무게를 입력하세요">
+        </div>
+        <button id="btn">결과보기</button>
+        <p></p>
     </div>
     <script>
         let a = 100;
         let b = 0.9;
-        let height = '';
-        let result = (height-a)*b
-        const weight = document.querySelector('.weight');
-        const data = document.querySelector('#data')
+        const weight = document.querySelector('#weight');
+        const height = document.querySelector('#height')
         const btn = document.querySelector('#btn')
-        console.log(weight, data, btn);
+        const p = document.querySelector('p')
+        console.log(weight, height, btn, p);
+        btn.addEventListener('click',function(){
+            p.innerHTML = `적정체중은 ${(height.value-a)*b}KG이며<br>${weight.value-(height.value-a)*b}KG 초과되셨습니다.`
+        })
     </script>
 </body>
 </html>
